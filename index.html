@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4b2ba6cd1f.js" crossorigin="anonymous"></script>
+
+    <title>Burger-Menu</title>
+
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <ul id="lista" class="lista-desk">
+            <li class="elemento-nav"><a href="#">home</a></li>
+            <li class="elemento-nav"><a href="#">chi siamo</a></li>
+            <li class="elemento-nav"><a href="#">prodotti</a></li>
+            <li id="bottone" class="yellow-btn elemento-nav"><a href="#">contattaci</a></li>
+            <li class="burger gray" id="bmenu">
+                <i class="fa-solid fa-bars fa-2x" id="burgermenu"></i>
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+
+    <script>
+
+            /* HAMBURGER MENU - <i class="fa-solid fa-bars 2-x"></i> */
+
+            /* X for CLOSURE - <i class="fa-solid fa-xmark fa-3x"></i> */
+
+            document.getElementById("burgermenu").addEventListener("click",()=>
+            {
+                document.getElementById("lista").classList.toggle("lista-blue");
+                document.getElementById("bottone").classList.toggle("yellow-btn");
+                document.getElementById("navbar").classList.toggle("border-0");
+
+                let burgermenu = document.getElementById("burgermenu")
+
+                if(document.getElementById("burgermenu").classList.contains("fa-bars")){
+                    burgermenu.classList.replace("fa-bars","fa-xmark")  
+                }
+                else
+                    burgermenu.classList.replace("fa-xmark","fa-bars")  
+
+            })
+
+    </script>
+
+</html>
